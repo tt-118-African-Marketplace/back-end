@@ -1,0 +1,40 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "AfricanMarketplace",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tt-118-African-Marketplace/front-end"
+  },
+  "author": "Ian Tucker n Brad too I guess",
+  "license": "IDK",
+  "bugs": {
+    "url": "https://github.com/tt-118-African-Marketplace/front-end/issues"
+  },
+  "homepage": "https://github.com/tt-118-African-Marketplace/front-end#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.6",
+    "pg": "^8.4.1",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^26.6.0",
+    "nodemon": "^2.0.5",
+    "supertest": "^5.0.0"
+  }
+}
