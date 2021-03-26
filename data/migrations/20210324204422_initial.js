@@ -1,4 +1,4 @@
-const { table } = require("../data/config");
+const { table } = require("../config");
 
 exports.up = async function(knex) {
   await knex.schema.createTable("items", (table)=>{
@@ -8,7 +8,7 @@ exports.up = async function(knex) {
     table.integer("price").nullable()
     table.string("location").nullable()
     table.string("category").nullable()
-    table.string("url").nullable()
+    table.string("URL").nullable()
     // table.integer("user_id")
   })
   await knex.schema.createTable("users", (table) =>{
