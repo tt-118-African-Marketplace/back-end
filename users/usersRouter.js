@@ -29,6 +29,7 @@ router.get("/:id", validateUserId, (req, res) => {
 
 //get users items
 router.get("/:id/items", restricted, validateUserId, (req, res) => {
+
     const id = req.params.id;
 
     Users.findById(id)
