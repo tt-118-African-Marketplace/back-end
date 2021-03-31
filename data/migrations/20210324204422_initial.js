@@ -9,7 +9,8 @@ exports.up = async function(knex) {
     table.string("location").nullable()
     table.string("category").nullable()
     table.string("URL").nullable()
-    // table.integer("user_id")
+    table.integer("user_id")
+
   })
   await knex.schema.createTable("users", (table) =>{
       table.increments("id")
@@ -26,7 +27,7 @@ exports.up = async function(knex) {
 };
 
 exports.down = async function(knex) {
-  await knex.schema.dropTableIfExists("user_items")
+  await knex.schema.dropTableIfExists("users_items")
   await knex.schema.dropTableIfExists("users")
   await knex.schema.dropTableIfExists("items")
 };
