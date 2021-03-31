@@ -1,0 +1,19 @@
+const Items = require('../../items/itemsModel.js')
+module.exports = function verifyItemId(req, res, next) {
+    const id = req.params.id;
+
+    Items.getItemsById(id)
+        .then(item => {
+            if (item) {
+                req.item = item;
+                next();
+            } else {
+                res.status(404).json({
+                    message: "Item does not exist."
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
+}
