@@ -8,6 +8,7 @@ beforeEach(() => {
     .then(() => db.migrate.latest())
     .then(() => db.seed.run());
 });
+
 afterAll(async () => {
     await db.destroy() // closes the database connection
 });
@@ -42,8 +43,4 @@ test('POST /auth/login', async () => {
     password: 'dean'
     });
   expect(response.status).toBe(200);
-  // expect(response.body).toMatchObject({
-  //   username: 'johnny',
-  //   department: 'buyer'
-  // });
 });
