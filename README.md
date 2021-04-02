@@ -58,3 +58,5 @@
 | PUT    | `/items/:id`       | yes            | Edits a single item                                                                                |
 | DELETE | `/items/:id`       | yes            | Deletes a single item                                                                              |
 | GET    | `/items/:category` | yes            | Gets all items in a category                                                                       |
+
+psst.
